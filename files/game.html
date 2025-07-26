@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>猜数字游戏</h2>
-<p>在1到100之间猜一个数字:</p>
+<h2>Guess the number game</h2>
+<p>Guess a number between 1 and 100:</p>
 <input id="guess" type="number">
 <br><br>
-<button onclick="checkGuess()">提交答案</button>
+<button onclick="checkGuess()">submit </button>
 <p id="result"></p>
 <script>
 var answer = Math.floor(Math.random() * 100) + 1;
 function checkGuess() {
 var guess = document.getElementById("guess").value;
 if (guess == answer) {
-document.getElementById("result").innerHTML = "恭喜你！你猜对了！";
+document.getElementById("result").innerHTML = "Congratulations! You guessed it!";
 } else if (guess >answer) {
-document.getElementById("result").innerHTML = "你猜的数字太大了，再试一次吧。";
+document.getElementById("result").innerHTML = "Your guess was too high. Try again.";
 } else {
-document.getElementById("result").innerHTML = "你猜的数字太小了，再试一次吧。";
+document.getElementById("result").innerHTML = "Your guess was too low. Try again.";
 }
 }
 </script>
